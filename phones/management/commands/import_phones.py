@@ -17,4 +17,3 @@ class Command(BaseCommand):
             new_phone = Phone(phone.get('id'), phone.get('name'), phone.get('image'),
                       phone.get('price'), phone.get('release_date'), phone.get('lte_exists'),
                       slugify(phone.get('name'), allow_unicode=True))
-            new_phone.save()

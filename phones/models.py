@@ -11,5 +11,5 @@ class Phone(models.Model):
     slug = models.SlugField(blank=True, unique=True, verbose_name='URL')
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
+        self.slug = slugify(self.slug)
         super(Phone, self).save(*args, **kwargs)
